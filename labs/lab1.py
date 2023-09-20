@@ -1,4 +1,20 @@
 import math #импортировал математику
-
-def task1():
-  pass
+while True:
+    SAD = int(input("Введите номер задания: ")) #вводим номер нужного задания
+    print()
+    if SAD == 1: #Надо же как то определить, какое задание ...
+        x, y, z = map(float,input("Введите x y z соответственно: ").split())
+        print("a =", (x ** 0.5 - (abs(y)) ** 0.25)/(x - math.log2(y)))
+        print("b =", math.tan((x - 1) ** 0.5) - (abs(z)) ** (1 / 3) - y ** (1 / 6) + x)
+        print()
+    elif SAD == 2:
+        x = float(input("Введите значение x: "))
+        print("f(x) = ", x ** 2 + (-5 * x) ** 0.5 / (2 * x + 5))
+        print()
+    elif SAD == 3:
+        x = float(input("Введите значение x: "))
+        print("f(x) = ", (math.cos(math.sin(1 / x ** 2))) ** 2)
+        print() #для эстетичности
+    exit = float(input("введите 1 для выхода: "))
+    if exit == 1:
+        break
