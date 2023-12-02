@@ -74,7 +74,7 @@ while True:
         print("")
     if SaD == 5:
         x = float(input("Введите значение x: "))
-        max = max(math.sin(x), math.cos(x))
+        max = max(math.sin(x), math.cos(x), math.log(x))
         min =
         ne =
         print(" ", max ," ", ne ," ", min)
