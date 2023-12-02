@@ -2,14 +2,27 @@ import math  # импортировал математику
 
 def CHotCif(Cif):
     if Cif % 2 == 0:
-        CIF = "чётное"
+        return "чётное"
     else :
-        CIF = "нечётное"
+        return "нечётное"
 
+def PALINDROP(CHislo):
+    if CHislo / 100 >= 1 and CHislo / 100 < 10:
+        if CHislo % 1000 = CHislo % 10:
+            CHISLO = "Да"
+        else:
+        return "Нет"
+    else:
+        return "Нет"
 
+def decimnal_in_new_numeral_system(number, base):
+    digits = "0123456789ABCDEF"
+    if number < base:
+        return digits[number]
+    else:
+        return convert(number // base, base) + digits[number % base]
 
-
-
+print("Доброе пожаловать в lab2.py")
 while True:
     while True:
         SaD = float(input("Введите номер задания (0 - выход): "))  # вводим номер нужного задания
@@ -42,37 +55,38 @@ while True:
         #
         print("")
     if SaD == 3:
-        x, y = map(float, input("Введите значения числителя и знаменателя: ").split())
-        print("f(x) = ", (math.cos(math.sin(1 / x ** 2))) ** 2)
+        number, base = map(float, input("Введите значения числа и систему счисления: ").split())
+        print("Ваше число: ", decimnal_in_new_numeral_system(number, base))
         print("")
     if SaD == 4:
-        k = float(input("Введите значение k - стороны треугольника: "))
-        print("S =", 0.5 * k * (k ** 2 - (0.5 * k) ** 2))
+        x, y = map(float,inpit("Введите координаты x y: ").split())
+        if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 -1 and x >= -1) or (y = (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
+            print("точка находится в левой фигуре")
+        elif (False) or (x >= 4 and y <= - 1 and y >= x - 7) or (False) or (x <= 4 and y >= -1 and y <= x - 3) or (x <= 4 and y <= 1 and y >= x / 2 + 3):
+            print("точка находится в правой фигуре")
+        else :
+            print("точка находится за фигурами")
+#
+#
+#Доделать!
+#
+#
         print("")
     if SaD == 5:
-        v1, t1 = map(float, input("Введите значения V1 и T1: ").split())
-        v2, t2 = map(float, input("Введите значения V2 и T2: ").split())
-        print("V = ", v1 + v2 ,"T = ", ((v1 * t1) + (v2 * t2)) / v1 + v2)  #ВЫДУМАЛ!
+        x = float(input("Введите значение x: "))
+        max = max(math.sin(x), math.cos(x))
+        min =
+        ne =
+        print(" ", max ," ", ne ," ", min)
         print("")
     if SaD == 6:
-        x1, y1 = map(float, input("Введите значения x1 y1: ").split())
-        x2, y2 = map(float, input("Введите значения x2 y2: ").split())
-        x3, y3 = map(float, input("Введите значения x3 y3: ").split())
-        print("R = ", ( ((p - ab)(p - bc)(p - ca)) / p ) ** 0.5)
+        
         print("")
     if SaD == 7:
-        A1, B1, C1 = map(float, input("Введите A1, B1, C1: ").split())
-        A2, B2, C2 = map(float, input("Введите A2, B2, C2: ").split())
-        print("Решение системы = ", A1 * x + B1 * y )
+        
         print("")
     if SaD == 8:
-        V1, V2, S1, T = map(float, input("Введите значения V1, V2, S1 и T, через пробел: ").split())
-        while True:
-            if V1 < 1 or V1 > 100 or V2 < 1 or V2 > 100 or S1 < 1 or S1 > 100 or T < 1 or T > 100
-                print("Каждое из значений лежит от 1 до 100 включительно!")
-            else:
-                break
-        print("S = ", S1 + V1 * T + V2 * T)
+        
         print("")
     if SaD == 9:
         part_first, part_second, profit = map(float, input("Введите значения вложений двух предпринимателей и их доход: ").split())
