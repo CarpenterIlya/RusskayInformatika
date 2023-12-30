@@ -21,7 +21,7 @@ def task_2():
     mas = [["."] * a for i in range (a)]
 
 def task_3():
-    with open('DLYA_task_3.txt', 'w+') as f:
+    with open('DLYA_task_3.txt', 'a') as f:
         for i in range(5):
             print("Введите текст: ")
             f.write(input())
@@ -44,8 +44,6 @@ def task_5():
 def task_6():
     pass
 def task_7():
-    pass
-def task_8():
     pass
 
 task_3()
