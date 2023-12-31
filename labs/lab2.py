@@ -23,11 +23,13 @@ def decimnal_in_new_numeral_system(number, base):
 def months_to_buy(cost, salary):
     while
 
-
+def fac(i):
+    for o in range (1, i):
+        p *= o + 1
+        
 def task1():
     Cif = float(input("Введите число: "))
     print("")
-
 
 def task2():
     x = float(input("Введите значение x: "))
@@ -43,12 +45,10 @@ def task2():
     #
     print("")
 
-
 def task3():
     number, base = map(float, input("Введите значения числа и систему счисления: ").split())
     print("Ваше число: ", decimnal_in_new_numeral_system(number, base))
     print("")
-
 
 def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
@@ -67,7 +67,6 @@ def task4():
     #
     print("")
 
-
 def task5():
     x = float(input("Введите значение x: "))
     if x != 0 and x != 1:
@@ -77,23 +76,27 @@ def task5():
         print(" ", max(math.sin(x), math.cos(x), math.log(x)), " ", min(math.sin(x), math.cos(x), math.log(x)))
     print("")
 
-
 def task6():
     pass
 
-
-def task7():
-    pass
-
-
 def task8():
-    pass
-
+    x = int(input("Введите x: "))
+    p = 1
+    a = 0
+    for i in range (1, 5):
+        a += (x ** i)/fac(i)
+    print(a)
 
 def task9():
-    pass
+    ABC = 0
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                ABC += j ** 2
+    print(ABC)
 
 
 def task10():
     pass
+    
 task2()
