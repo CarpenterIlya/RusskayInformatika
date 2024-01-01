@@ -43,9 +43,9 @@ def task1():
 	else:
 	    print("Не чётное")
 	if PALISANDROP:
-        print("Палисандроп")
+        	print("Палисандроп")
 	else:
-        print("Не палисандроп")
+        	print("Не палисандроп")
 
 def task2():
     x = float(input("Введите значение x: "))
@@ -55,10 +55,10 @@ def task2():
     x = np.linspase(a, b, (b - a) * 10)
     if x >= 0:
         print("Fx = ", 2 * (x ** 2 - 5) - x)
-	    y = 2 * (x ** 2 - 5) - x
+	y = 2 * (x ** 2 - 5) - x
     else:
         print("Fx = ", math.tan(x) - 10)
-	    y = math.tan(x) - 10
+	y = math.tan(x) - 10
     ax.plot(x, y)
     plt.show() #Построение графиков функций в питон it-start - это ссылка
 
@@ -68,11 +68,9 @@ def task3():
 
 def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
-    if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 - 1 and x >= -1) or (y
-    = (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
+    if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 - 1 and x >= -1) or (y = (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
         print("точка находится в левой фигуре")
-    elif (False) or (x >= 4 and y <= - 1 and y >= x - 7) or (False) or (x <= 4 and y >= -1 and y <= x - 3) or (
-            x <= 4 and y <= 1 and y >= x / 2 + 3):
+    elif (False) or (x >= 4 and y <= - 1 and y >= x - 7) or (False) or (x <= 4 and y >= -1 and y <= x - 3) or (x <= 4 and y <= 1 and y >= x / 2 + 3):
         print("точка находится в правой фигуре")
     else:
         print("точка находится за фигурами")
