@@ -30,8 +30,10 @@ def months_to_buy(cost, salary):
 
 
 def fac(i):
+    p = 1
     for o in range (1, i):
         p *= o + 1
+    return p
         
 def task1():
     while True:
@@ -77,11 +79,30 @@ def task4():
 
 def task5():
     x = float(input("Введите значение x: "))
-    if x != 0 and x != 1:
-        ne =
-        print(" ", max(math.sin(x), math.cos(x), math.log(x)), " ", ne, " ", min(math.sin(x), math.cos(x), math.log(x)))
+    if x > 0:
+        if math.sin(x) > math.cos(x)/x and math.sin(x) > math.log(x):
+            if math.cos(x)/x >= math.log(x):
+                print(math.sin(x), math.cos(x)/x, math.log(x))
+            else:
+                print(math.sin(x), math.log(x), math.cos(x)/x)
+        elif math.cos(x)/x > math.sin(x) and math.cos(x) > math.log(x):
+            if math.sin(x) >= math.log(x):
+                print(math.cos(x)/x, math.sin(x), math.log(x))
+            else:
+                print(math.cos(x)/x, math.log(x), math.sin(x))
+        else:
+            if math.sin(x) >= math.cos(x)/x:
+                print(math.log(x), math.sin(x), math.cos(x)/x)
+            else:
+                print(math.log(x), math.cos(x)/x, math.sin(x))
+    elif x < 0:
+        if math.sin(x) > math.cos(x)/x:
+            print(math.sin(x) , math.cos(x)/x, "log отриц. числа не определено")
+        else:
+            print(math.cos(x)/x , math.sin(x), "log отриц. числа не определено")
     else:
-        print(" ", max(math.sin(x), math.cos(x), math.log(x)), " ", min(math.sin(x), math.cos(x), math.log(x)))
+        print("sin(0) = 0, а log(0) и деление на 0 не определено")
+
 
 def task6():
     cost, salary = map(float, input("Введите стоимость и зарплату: ").split())
