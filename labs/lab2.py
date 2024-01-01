@@ -112,7 +112,7 @@ def task8():
     x, e = map(int,input("Введите x и e(кол-во знаков после запятой): ").split())
     p = 1
     a = 0
-    for i in range (1, 6):
+    for i in range (1, 200):
         a += (x ** i)/fac(i)
     print(f"{a:.{}f}".format(e))
 
