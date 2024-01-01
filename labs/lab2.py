@@ -1,7 +1,9 @@
 import math
+import matplotlib.pyplot as plt
+import numpy as np
+
 def CHotCif(Cif):
     return Cif % 2 == 0
-
 
 def PALINDROP(CHislo):
     if CHislo / 100 >= 1 and CHislo / 100 < 10:
@@ -11,7 +13,6 @@ def PALINDROP(CHislo):
             return False
     else:
         return False
-
 
 def decimnal_in_new_numeral_system(number, base):
     digits = "0123456789ABCDEF"
@@ -27,7 +28,6 @@ def months_to_buy(cost, salary):
 	    salary += salary * 0.05
 	    c += 1
     return c
-
 
 def fac(i):
     p = 1
@@ -109,12 +109,12 @@ def task6():
     print(monts_to_buy(cost, salary))
 
 def task8():
-    x = int(input("Введите x: "))
+    x, e = map(int,input("Введите x и e(кол-во знаков после запятой): ").split())
     p = 1
     a = 0
-    for i in range (1, 5):
+    for i in range (1, 6):
         a += (x ** i)/fac(i)
-    print(a)
+    print(f"{a:.{}f}".format(e))
 
 def task9():
     ABC = 0
@@ -122,6 +122,17 @@ def task9():
         for j in range(9):
             if i != j:
                 ABC += j ** 2
+    print(ABC)
+    ABC = 0
+    for i in range(9):
+        for j in range(4):
+            ABC += j ** 3 + i ** 2
+    print(ABC)
+    ABC = 0
+    for i in range(9):
+        for j in range(i + 1):
+            for k in range(j + 1):
+                ABC += j ** 2 + i - 2 * k
     print(ABC)
 
 def task10():
