@@ -21,34 +21,48 @@ def decimnal_in_new_numeral_system(number, base):
         return math.convert(number // base, base) + digits[number % base]
 
 def months_to_buy(cost, salary):
-    while
+    c = 0
+    while salary <= cost
+	    cost += cost * 0.0315
+	    salary += salary * 0.05
+	    c += 1
+    return c
+
 
 def fac(i):
     for o in range (1, i):
         p *= o + 1
         
 def task1():
-    Cif = float(input("Введите число: "))
-    print("")
+    while True:
+        Cif = float(input("Введите число: "))
+	if CHotCif :
+	    print("Чётное")
+	else:
+	    print("Не чётное")
+	if PALISANDROP:
+        print("Палисандроп")
+	else:
+        print("Не палисандроп")
 
 def task2():
     x = float(input("Введите значение x: "))
     a, b = map(float, input("введите интервал [a,b]: ").split())
+    fig, ab = plt.subplots()
+    ab.set_title("График функции")
+    x = np.linspase(a, b, (b - a) * 10)
     if x >= 0:
         print("Fx = ", 2 * (x ** 2 - 5) - x)
+	    y = 2 * (x ** 2 - 5) - x
     else:
         print("Fx = ", math.tan(x) - 10)
-    #
-    #
-    # Какой график
-    #
-    #
-    print("")
+	    y = math.tan(x) - 10
+    ax.plot(x, y)
+    plt.show() #Построение графиков функций в питон it-start - это ссылка
 
 def task3():
     number, base = map(float, input("Введите значения числа и систему счисления: ").split())
     print("Ваше число: ", decimnal_in_new_numeral_system(number, base))
-    print("")
 
 def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
@@ -60,12 +74,6 @@ def task4():
         print("точка находится в правой фигуре")
     else:
         print("точка находится за фигурами")
-    #
-    #
-    # Доделать!
-    #
-    #
-    print("")
 
 def task5():
     x = float(input("Введите значение x: "))
@@ -74,10 +82,10 @@ def task5():
         print(" ", max(math.sin(x), math.cos(x), math.log(x)), " ", ne, " ", min(math.sin(x), math.cos(x), math.log(x)))
     else:
         print(" ", max(math.sin(x), math.cos(x), math.log(x)), " ", min(math.sin(x), math.cos(x), math.log(x)))
-    print("")
 
 def task6():
-    pass
+    cost, salary = map(float, input("Введите стоимость и зарплату: ").split())
+    print(monts_to_buy(cost, salary))
 
 def task8():
     x = int(input("Введите x: "))
@@ -94,7 +102,6 @@ def task9():
             if i != j:
                 ABC += j ** 2
     print(ABC)
-
 
 def task10():
     pass
