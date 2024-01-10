@@ -101,15 +101,18 @@ def sraw(u):
 def task_5():
     stop = input("Введите стоп слово: ")
     while True:
-        U = input("Введите текст: ")
-        u = U[0]
-        if U == stop:
+        text = input("Введите текст: ")
+        u = text[0]
+        if text == stop:
             break
         elif sraw(u):
-            U = open("DLYA_task_5-1.txt", "w+")
-            print("+")
+            file = open("DLYA_task_5-1.txt", "w+", encoding="utf-8")
+            file.write(text)
+            file.close()
         else:
-            U = open("DLYA_task_5-2.txt", "w+")
+            file = open("DLYA_task_5-2.txt", "w+", encoding="utf-8")
+            file.write(text)
+            file.close()
 
 def task_6():
     pass
