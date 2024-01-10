@@ -72,7 +72,32 @@ def task_3():
             f.write(input())
     
 def task_4():
-    pass
+    array = input("Введите что-то: ")
+    array = array.split()
+    c = 0
+    while True:
+        for i in range(len(array)-2):
+            c += 1
+            if len(array[i] + array[i+1]) < 10:
+                c = 0
+                array[i] = array[i] + array[i+1]
+                if i <= len(array) - 1:
+                    for g in range(i, len(array)-1):
+                        array[g] = array[g + 1]
+                array.pop(len(array)-1)
+        if c >= len(array):
+            break
+    number = int(input("Введите номер строки для отметки: "))
+    otmetka(array, number)
+    print_string_list(array)
+#
+#
+# Не работает
+#
+#
+def sraw(u):
+    return ((ord(u) >= 1040 and ord(u) < 1072) or (ord(u) >= 65 and ord(u) < 91))
+
 def task_5():
     stop = input("Введите стоп слово: ")
     while True:
@@ -80,15 +105,39 @@ def task_5():
         u = U[0]
         if U == stop:
             break
-        elif ord(u) in [1030, 1064]:
-            U = open("DLYA_task_5-1.txt", "w")
+        elif sraw(u):
+            U = open("DLYA_task_5-1.txt", "w+")
+            print("+")
         else:
-            U = open("DLYA_task_5-2.txt", "w")
-    U.close()
+            U = open("DLYA_task_5-2.txt", "w+")
 
 def task_6():
     pass
+
+def proverka1(SP, G):
+    count = 0
+    for i in range(len(SP)):
+        if SP[i] == SP[G]:
+            count += 1
+    return count > 0
+    
 def task_7():
-    pass
+    RAS = input("Вводи: ")
+    RAS = RAS.split()
+    a = int(input("Сколько хотите названий? "))
+    SP = []
+    g = 0
+    while g < a: # создание переменных
+        name = ""
+        i = int(random.randint(1, 20)) # количество букавак
+        for I in range(i-1):
+            name += chr(random.randint(1040, 1104) or random.randint(65, 91) or random.randint(97, 123))
+        G = g
+        SP[g] = name + "." + RAS[random.randint(0, len(RAS)-1)]
+        if proverka1(SP, G):
+            g -= 1
+        else:
+            print(SP[g])
+        g += 1
 
 task_3()
