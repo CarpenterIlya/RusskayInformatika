@@ -70,7 +70,7 @@ def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
     if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 - 1 and x >= -1) or (y = (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
         print("точка находится в левой фигуре")
-    elif (False) or (x >= 4 and y <= - 1 and y >= x - 7) or (False) or (x <= 4 and y >= -1 and y <= x - 3) or (x <= 4 and y <= 1 and y >= x / 2 + 3):
+    elif (2 <= (y + 1) ** 2 + (x - 4) ** 2 and x <= 4 and y <= -1) or (x >= 4 and y <= - 1 and y >= x - 7) or (2 <= (y + 1) ** 2 + (x - 4) ** 2 and x >= 4 and y >= -1) or (x <= 4 and y >= -1 and y <= x - 3) or (x <= 4 and y <= 1 and y >= x / 2 + 3):
         print("точка находится в правой фигуре")
     else:
         print("точка находится за фигурами")
