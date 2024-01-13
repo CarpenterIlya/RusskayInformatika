@@ -108,7 +108,8 @@ def task6():
 
 def task8():
     x, e = map(int,input("Введите x и e(кол-во знаков после запятой): ").split())
-    print(2,7 ** x)
+    l = x // 1
+    print("{2,7 ** x:.l+e}")
 
 def task9():
     ABC = 0
