@@ -1,4 +1,5 @@
-ile = open('task_8.txt', 'r', encoding="utf-8")
+file = input("Введите файл и путь к нему если нужно: ")
+ile = open('{}.txt'.format(file), 'r', encoding="utf-8")
 le = ile.read()
 print(le)
 ile.close()
