@@ -107,10 +107,23 @@ def task6():
     print(monts_to_buy(cost, salary))
 
 def task8():
-    x, e = map(int,input("Введите x и e(кол-во знаков после запятой): ").split())
-    l = x // 1
-    print("{2,7 ** x:.l+e}")
-
+    x, e = map(float,input("Введите x и e(кол-во знаков после запятой): ").split())
+    GOTOVO = math.exp(x)
+    G = GOTOVO
+    len_Levo = len(str(GOTOVO // 1)) - 2
+    len_Pravo = len(str(GOTOVO)) - len_Levo - 1
+    if len_Pravo > e:
+        while G % 1 > 0:
+            G *= 10
+        print(int(G))
+        LEVO = str(int(GOTOVO // 1))
+        PRAVO = str(int((G % 10 ** len_Pravo) // 10 ** (len_Pravo - e)))
+        GOTOVO = LEVO + "." + PRAVO
+    else :
+        for i in range(len_Pravo, int(e)):
+            GOTOVO = str(GOTOVO) + "0"
+    print(GOTOVO)
+	
 def task9():
     ABC = 0
     for i in range(9):
