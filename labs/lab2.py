@@ -5,7 +5,7 @@ import numpy as np
 def CHotCif(Cif):
     return Cif % 2 == 0
 
-def PALINDROP(CHislo):
+def PALINDROP(Cif):
     if CHislo / 100 >= 1 and CHislo / 100 < 10:
         if CHislo % 1000 == CHislo % 10:
             return True
@@ -38,11 +38,11 @@ def fac(i):
 def task1():
     while True:
         Cif = float(input("Введите число: "))
-	if CHotCif :
+	if CHotCif(Cif) :
 	    print("Чётное")
 	else:
 	    print("Не чётное")
-	if PALISANDROP:
+	if PALISANDROP(Cif):
         	print("Палисандроп")
 	else:
         	print("Не палисандроп")
