@@ -83,7 +83,7 @@ def task5():
                 print(math.sin(x), math.cos(x)/x, math.log(x))
             else:
                 print(math.sin(x), math.log(x), math.cos(x)/x)
-        elif math.cos(x)/x > math.sin(x) and math.cos(x) > math.log(x):
+        elif math.cos(x)/x > math.sin(x) and math.cos(x)/x > math.log(x):
             if math.sin(x) >= math.log(x):
                 print(math.cos(x)/x, math.sin(x), math.log(x))
             else:
