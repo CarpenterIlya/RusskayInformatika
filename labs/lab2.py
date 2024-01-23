@@ -110,15 +110,22 @@ def task8():
     x, e = map(float,input("Введите x и e(кол-во знаков после запятой): ").split())
     GOTOVO = math.exp(x)
     G = GOTOVO
-    len_Levo = len(str(GOTOVO // 1)) - 2
-    len_Pravo = len(str(GOTOVO)) - len_Levo - 1
-    if len_Pravo > e:
+    len_Levo = len(str(G // 1)) - 2
+    len_Pravo = len(str(G)) - len_Levo - 1
+    LEVO = str(int(GOTOVO // 1))
+    if e < 0:
+        if -1 * e < len_Levo:
+            GOTOVO = int(int(LEVO) // (10 ** (-1 * e)))
+        else:
+            GOTOVO = " "
+    elif len_Pravo > e:
         while G % 1 > 0:
             G *= 10
-        print(int(G))
-        LEVO = str(int(GOTOVO // 1))
         PRAVO = str(int((G % 10 ** len_Pravo) // 10 ** (len_Pravo - e)))
-        GOTOVO = LEVO + "." + PRAVO
+        if e == 0:
+            GOTOVO = LEVO
+        else:
+            GOTOVO = LEVO + "." + PRAVO
     else :
         for i in range(len_Pravo, int(e)):
             GOTOVO = str(GOTOVO) + "0"
@@ -126,20 +133,22 @@ def task8():
 	
 def task9():
     ABC = 0
-    for i in range(9):
-        for j in range(9):
+    for i in range(1, 9):
+        for j in range(1, 9):
             if i != j:
                 ABC += j ** 2
     print(ABC)
     ABC = 0
-    for i in range(9):
-        for j in range(4):
-            ABC += j ** 3 + i ** 2
+    for i in range(1, 9):
+        abc = 1 ** 3 + 1 ** 2
+        for j in range(2, 9):
+            abc *= j ** 3 + i ** 2
+        ABC += abc
     print(ABC)
     ABC = 0
-    for i in range(9):
-        for j in range(i + 1):
-            for k in range(j + 1):
+    for i in range(1, 9):
+        for j in range(1, i + 1):
+            for k in range(1, j + 1):
                 ABC += j ** 2 + i - 2 * k
     print(ABC)
 
