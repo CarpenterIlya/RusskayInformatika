@@ -35,19 +35,14 @@ def proverka3(array):
     
 def proverka4(array):
     count = 0
-    for i in range(len(array)-1):
-        for j in range(len(array)-1):
+    for i in range(2, len(array)-1):
+        for j in range(i+1, len(array)-1):
             if array[i] == array[i+1] and array[j] == array[j+1]:
-                count += 1
-    if count > 0:
-        print("Две пары одинаковых символов есть!")
+                return True
 
 def proverka5(array):
     print("Кол-во пробелов =", array.count(" "))
-def print_char_2d_array(array):
-    pass
-def vistrel(row, column, array):
-    pass
+
 def task_1():
     array = input("Введите массив: ")
     array = array.split()
@@ -59,11 +54,10 @@ def task_1():
     first_symbol, second_symbol = map(int,input("Введите пару символов: ").split())
     proverka2(array, first_symbol, second_symbol)
     proverka3(array)
-    proverka4(array)
+    print("proverka4(array)", proverka4(array))
     proverka5(array)
 def task_2():
-    a = int(input("Введите размер стороны поля для игры Морской бой: "))
-    mas = [["."] * a for i in range (a)]
+    pass
 
 def task_3():
     with open('DLYA_task_3.txt', 'a') as f:
@@ -90,11 +84,7 @@ def task_4():
     number = int(input("Введите номер строки для отметки: "))
     otmetka(array, number)
     print_string_list(array)
-#
-#
-# Не работает
-#
-#
+
 def sraw(u):
     return ((ord(u) >= 1040 and ord(u) < 1072) or (ord(u) >= 65 and ord(u) < 91))
 
@@ -116,7 +106,6 @@ def task_5():
 
 def task_6():
     pass
-
 def proverka1(SP, G):
     count = 0
     for i in range(len(SP)):
