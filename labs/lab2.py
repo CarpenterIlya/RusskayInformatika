@@ -140,7 +140,7 @@ def task9():
     print(ABC)
     ABC = 0
     for i in range(1, 9):
-        abc = 1 ** 3 + 1 ** 2
+        abc = 1 ** 3 + i ** 2
         for j in range(2, 9):
             abc *= j ** 3 + i ** 2
         ABC += abc
