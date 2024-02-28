@@ -50,17 +50,50 @@ def task1():
 def task2():
     x = float(input("Введите значение x: "))
     a, b = map(float, input("введите интервал [a,b]: ").split())
-    fig, ab = plt.subplots()
-    ab.set_title("График функции")
-    x = np.linspase(a, b, (b - a) * 10)
-    if x >= 0:
-        print("Fx = ", 2 * (x ** 2 - 5) - x)
-	y = 2 * (x ** 2 - 5) - x
+    delta = float(input("Какой отступ? "))
+    for i in range(a,b,delta):
+        if x >= 0:
+            print("Fx = ", 2 * (x ** 2 - 5) - x)
+            y = 2 * (x ** 2 - 5) - x
+        else:
+            print("Fx = ", math.tan(x) - 10)
+            y = math.tan(x) - 10
+    if a < 0 and b > 0:
+        if x > 0:
+            pass
+        else:
+            pass
+    if a < 0 and b > 0:
+        if x > 0:
+            pass
+        else:
+            pass
+    if a < 0 and b > 0:
+        if x > 0:
+            pass
+        else:
+            pass
     else:
-        print("Fx = ", math.tan(x) - 10)
-	y = math.tan(x) - 10
-    ax.plot(x, y)
-    plt.show() #Построение графиков функций в питон it-start - это ссылка
+        if x > 0:
+            pass
+        else:
+            pass
+    plt.plot(x, y)
+    plt.show()
+
+
+
+
+
+
+
+Доделать
+
+
+
+
+
+
 
 def task3():
     number, base = map(float, input("Введите значения числа и систему счисления: ").split())
