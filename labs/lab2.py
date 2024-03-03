@@ -2,17 +2,20 @@ import math
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 def CHotCif(Cif):
     return Cif % 2 == 0
 
-def PALINDROP(Cif):
-    if CHislo / 100 >= 1 and CHislo / 100 < 10:
-        if CHislo % 1000 == CHislo % 10:
+
+def PALISANDROP(Cif):
+    if Cif / 100 >= 1 and Cif / 100 < 10:
+        if Cif % 1000 == Cif % 10:
             return True
         else:
             return False
     else:
         return False
+
 
 def decimnal_in_new_numeral_system(number, base):
     digits = "0123456789ABCDEF"
@@ -21,37 +24,41 @@ def decimnal_in_new_numeral_system(number, base):
     else:
         return math.convert(number // base, base) + digits[number % base]
 
+
 def months_to_buy(cost, salary):
     c = 0
-    while salary <= cost
-	    cost += cost * 0.0315
-	    salary += salary * 0.05
-	    c += 1
+    while salary <= cost:
+        cost += cost * 0.0315
+        salary += salary * 0.05
+        c += 1
     return c
+
 
 def fac(i):
     p = 1
-    for o in range (1, i):
+    for o in range(1, i):
         p *= o + 1
     return p
-        
+
+
 def task1():
     while True:
         Cif = float(input("Введите число: "))
-	if CHotCif(Cif) :
-	    print("Чётное")
-	else:
-	    print("Не чётное")
-	if PALISANDROP(Cif):
-        	print("Палисандроп")
-	else:
-        	print("Не палисандроп")
+        if CHotCif(Cif):
+            print("Чётное")
+        else:
+            print("Не чётное")
+        if PALISANDROP(Cif):
+            print("Палисандроп")
+        else:
+            print("Не палисандроп")
+
 
 def task2():
     x = float(input("Введите значение x: "))
     a, b = map(float, input("введите интервал [a,b]: ").split())
     delta = float(input("Какой отступ? "))
-    for i in range(a,b,delta):
+    for i in range(a, b, delta):
         if x >= 0:
             print("Fx = ", 2 * (x ** 2 - 5) - x)
             y = 2 * (x ** 2 - 5) - x
@@ -82,65 +89,60 @@ def task2():
     plt.show()
 
 
-
-
-
-
-
-Доделать
-
-
-
-
-
+#Доделать
 
 
 def task3():
     number, base = map(float, input("Введите значения числа и систему счисления: ").split())
     print("Ваше число: ", decimnal_in_new_numeral_system(number, base))
 
+
 def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
-    if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 - 1 and x >= -1) or (y = (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
+    if (y <= x / 1.5 + 3.5 and y >= x / 3 - 1 and y >= x / 2 - 1 and x >= -1) or (y == (x ** 2 + 1) ** 0.5 - 1 and x <= -1):
         print("точка находится в левой фигуре")
-    elif (2 <= (y + 1) ** 2 + (x - 4) ** 2 and x <= 4 and y <= -1) or (x >= 4 and y <= - 1 and y >= x - 7) or (2 <= (y + 1) ** 2 + (x - 4) ** 2 and x >= 4 and y >= -1) or (x <= 4 and y >= -1 and y <= x - 3) or (x <= 4 and y <= 1 and y >= x / 2 + 3):
+    elif (2 <= (y + 1) ** 2 + (x - 4) ** 2 and x <= 4 and y <= -1) or (x >= 4 and y <= - 1 and y >= x - 7) or (
+            2 <= (y + 1) ** 2 + (x - 4) ** 2 and x >= 4 and y >= -1) or (x <= 4 and y >= -1 and y <= x - 3) or (
+            x <= 4 and y <= 1 and y >= x / 2 + 3):
         print("точка находится в правой фигуре")
     else:
         print("точка находится за фигурами")
 
+
 def task5():
     x = float(input("Введите значение x: "))
     if x > 0:
-        if math.sin(x) > math.cos(x)/x and math.sin(x) > math.log(x):
-            if math.cos(x)/x >= math.log(x):
-                print(math.sin(x), math.cos(x)/x, math.log(x))
+        if math.sin(x) > math.cos(x) / x and math.sin(x) > math.log(x):
+            if math.cos(x) / x >= math.log(x):
+                print(math.sin(x), math.cos(x) / x, math.log(x))
             else:
-                print(math.sin(x), math.log(x), math.cos(x)/x)
-        elif math.cos(x)/x > math.sin(x) and math.cos(x)/x > math.log(x):
+                print(math.sin(x), math.log(x), math.cos(x) / x)
+        elif math.cos(x) / x > math.sin(x) and math.cos(x) / x > math.log(x):
             if math.sin(x) >= math.log(x):
-                print(math.cos(x)/x, math.sin(x), math.log(x))
+                print(math.cos(x) / x, math.sin(x), math.log(x))
             else:
-                print(math.cos(x)/x, math.log(x), math.sin(x))
+                print(math.cos(x) / x, math.log(x), math.sin(x))
         else:
-            if math.sin(x) >= math.cos(x)/x:
-                print(math.log(x), math.sin(x), math.cos(x)/x)
+            if math.sin(x) >= math.cos(x) / x:
+                print(math.log(x), math.sin(x), math.cos(x) / x)
             else:
-                print(math.log(x), math.cos(x)/x, math.sin(x))
+                print(math.log(x), math.cos(x) / x, math.sin(x))
     elif x < 0:
-        if math.sin(x) > math.cos(x)/x:
-            print(math.sin(x) , math.cos(x)/x, "log отриц. числа не определено")
+        if math.sin(x) > math.cos(x) / x:
+            print(math.sin(x), math.cos(x) / x, "log отриц. числа не определено")
         else:
-            print(math.cos(x)/x , math.sin(x), "log отриц. числа не определено")
+            print(math.cos(x) / x, math.sin(x), "log отриц. числа не определено")
     else:
         print("sin(0) = 0, а log(0) и деление на 0 не определено")
 
 
 def task6():
     cost, salary = map(float, input("Введите стоимость и зарплату: ").split())
-    print(monts_to_buy(cost, salary))
+    print(months_to_buy(cost, salary))
+
 
 def task8():
-    x, e = map(float,input("Введите x и e(кол-во знаков после запятой): ").split())
+    x, e = map(float, input("Введите x и e(кол-во знаков после запятой): ").split())
     GOTOVO = math.exp(x)
     G = GOTOVO
     len_Levo = len(str(G // 1)) - 2
@@ -159,11 +161,12 @@ def task8():
             GOTOVO = LEVO
         else:
             GOTOVO = LEVO + "." + PRAVO
-    else :
+    else:
         for i in range(len_Pravo, int(e)):
             GOTOVO = str(GOTOVO) + "0"
     print(GOTOVO)
-	
+
+
 def task9():
     ABC = 0
     for i in range(1, 9):
@@ -185,7 +188,9 @@ def task9():
                 ABC += j ** 2 + i - 2 * k
     print(ABC)
 
+
 def task10():
     pass
-    
+
+
 task2()
