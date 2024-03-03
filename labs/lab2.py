@@ -55,38 +55,15 @@ def task1():
 
 
 def task2():
-    x = float(input("Введите значение x: "))
-    a, b = map(float, input("введите интервал [a,b]: ").split())
-    delta = float(input("Какой отступ? "))
-    for i in range(a, b, delta):
-        if x >= 0:
-            print("Fx = ", 2 * (x ** 2 - 5) - x)
+    a, b = map(float, input("введите диапазон a - b: ").split())
+    for i in range(a,b):
+        if x >= 0: 
             y = 2 * (x ** 2 - 5) - x
-        else:
-            print("Fx = ", math.tan(x) - 10)
-            y = math.tan(x) - 10
-    if a < 0 and b > 0:
-        if x > 0:
-            pass
-        else:
-            pass
-    if a < 0 and b > 0:
-        if x > 0:
-            pass
-        else:
-            pass
-    if a < 0 and b > 0:
-        if x > 0:
-            pass
-        else:
-            pass
-    else:
-        if x > 0:
-            pass
-        else:
-            pass
+        else: 
+            y = math.tan(x) - 10 
     plt.plot(x, y)
     plt.show()
+task2()
 
 
 #Доделать
