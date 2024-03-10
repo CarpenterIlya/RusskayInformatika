@@ -33,13 +33,11 @@ def months_to_buy(cost, salary):
         c += 1
     return c
 
-
 def fac(i):
     p = 1
     for o in range(1, i):
         p *= o + 1
     return p
-
 
 def task1():
     while True:
@@ -53,26 +51,40 @@ def task1():
         else:
             print("Не палисандроп")
 
-
 def task2():
-    a, b = map(float, input("введите диапазон a - b: ").split())
-    for i in range(a,b):
-        if x >= 0: 
-            y = 2 * (x ** 2 - 5) - x
-        else: 
-            y = math.tan(x) - 10 
-    plt.plot(x, y)
+    a, b = map(int, input("введите интервал [a,b]: ").split())
+    x = []
+    x2 = []
+    y = []
+    #fig, ax = plt.subplots(figsize=(5, 2.7), layout='constrained')
+    if min(a, b) >= 0:
+        for i in range(min(a, b), max(a, b) + 1):
+            x.append(i)
+        for kx in x:
+            y.append(2 * (kx ** 2 - 5) - kx)
+        plt.plot(x, y)
+    elif max(a, b) < 0:
+        for i in range(min(a, b), max(a, b) + 1):
+            x.append(i)
+        for kx in x:
+            y.append(math.tan(kx) - 10)
+        plt.plot(x, y)
+    else:
+        for i in range(min(a, b), 1):
+            x.append(i)
+        for kx in x:
+            y.append(math.tan(kx) - 10)
+        plt.plot(x, y)
+        y2 = []
+        for i in range(0, max(a, b) + 1):
+            x2.append(i)
+        for kx2 in x:
+            y2.append(2 * (kx2 ** 2 - 5) - kx2)
+        plt.plot(x2, y2)
     plt.show()
-task2()
-
-
-#Доделать
-
-
 def task3():
     number, base = map(float, input("Введите значения числа и систему счисления: ").split())
     print("Ваше число: ", decimnal_in_new_numeral_system(number, base))
-
 
 def task4():
     x, y = map(float, input("Введите координаты x y: ").split())
@@ -84,7 +96,6 @@ def task4():
         print("точка находится в правой фигуре")
     else:
         print("точка находится за фигурами")
-
 
 def task5():
     x = float(input("Введите значение x: "))
@@ -112,11 +123,9 @@ def task5():
     else:
         print("sin(0) = 0, а log(0) и деление на 0 не определено")
 
-
 def task6():
     cost, salary = map(float, input("Введите стоимость и зарплату: ").split())
     print(months_to_buy(cost, salary))
-
 
 def task8():
     x, e = map(float, input("Введите x и e(кол-во знаков после запятой): ").split())
